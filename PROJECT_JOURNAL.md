@@ -1,29 +1,37 @@
-# EmberRisk Engineering Journal
-
-## 2026-08-11 — Phase 0
-
-### Objective
-
-Initialize EmberRisk as an independent ML/MLOps portfolio project.
-
 ### Project Direction
 
-EmberRisk will focus on wildfire-risk classification using heterogeneous public environmental data.
+EmberRisk focuses on wildfire-risk classification using heterogeneous public environmental data.
 
-The project is intended to complement the existing TransactSafe and StreamPulse portfolio projects by focusing on machine-learning data pipelines, feature engineering, model training and evaluation, experiment tracking, model lifecycle management, orchestration, and monitoring.
+The project uses historical wildfire detections and weather data to build a daily grid-based dataset for California.
 
 ### Current Status
 
 - Repository initialized
 - Python virtual environment created
-- Python 3.12.3 verified
-- Git ignore rules configured
-- Initial project documentation created
+- Phase 1 data source study completed
+- Phase 2 ingestion architecture completed
+- FIRMS data ingested with manifest-based resumability
+- NASA POWER data ingested for the modeling period
+- Phase 3 processing completed
+- 323 canonical grid cells
+- 943,806 cell-day records generated
+- Fire-history features generated using the warm-up period
+- 3, 7 and 14-day targets generated
+- Phase 3 validation completed successfully
+- 74 automated tests passing
 
-### Important Decision
+### Phase 3 Output
 
-Data sources and the final prediction target will be verified before ingestion development begins.
+The processed dataset is stored in:
+
+`data/processed/cell_day_dataset.parquet`
+
+Targets are stored separately for 3, 7 and 14-day horizons.
+
+Validation results are stored in:
+
+`data/processed/validation_report.json`
 
 ### Next Step
 
-Verify candidate public environmental data sources and determine a defensible prediction target.
+Begin Phase 4: exploratory data analysis and feature analysis.
