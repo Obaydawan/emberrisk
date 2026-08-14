@@ -1,6 +1,6 @@
 # EmberRisk
 
-EmberRisk is a lightweight machine-learning,MLOps and project for wildfire-risk classification using public environmental data.
+EmberRisk is a lightweight machine-learning,MLOps and Data project for wildfire-risk classification using public environmental data.
 
 The project combines historical wildfire detections with weather and environmental data to build a cell-day dataset and predict whether a wildfire will occur within a future time horizon.
 
