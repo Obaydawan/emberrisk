@@ -9,8 +9,8 @@ import pytest
 from ml.dataset import FEATURE_COLUMNS
 from ml.baseline import (
     MajorityClassBaseline, PersistenceBaseline, LogisticRegressionBaseline,
-    _select_features,
 )
+from ml.features import select_features as _select_features
 from ml.train import fit_baselines
 
 

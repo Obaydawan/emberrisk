@@ -5,11 +5,11 @@ Three models, increasing in sophistication, all sharing one contract:
   fit(X, y) / predict(X) / predict_proba(X)
 so ml/train.py (and later evaluation code) can treat them uniformly.
 
-Every model in this module reads features through _select_features(), which
-selects EXACTLY ml.dataset.FEATURE_COLUMNS in a fixed order -- this is the
-single enforcement point that guarantees cell_id/date (or any other stray
-column X happens to carry) never reaches a model, no matter what extra
-columns the caller's DataFrame contains.
+Every model in this module reads features through ml.features.select_features(),
+the shared guard used by both this file and ml/models.py (Phase 5) -- this
+is the single enforcement point that guarantees cell_id/date (or any other
+stray column X happens to carry) never reaches a model, no matter what
+extra columns the caller's DataFrame contains.
 
 No threshold tuning, no hyperparameter search, no calibration -- explicitly
 out of scope for this step.
@@ -18,19 +18,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
-from ml.dataset import FEATURE_COLUMNS
-
-
-def _select_features(X):
-    """Selects exactly FEATURE_COLUMNS from X, in a fixed order. Raises if
-    any expected feature is missing. This is the ONLY place feature
-    selection happens in this module -- every model routes through it
-    rather than reading raw X, so cell_id/date exclusion is structural,
-    not a convention that could be forgotten in one model but not another."""
-    missing = [c for c in FEATURE_COLUMNS if c not in X.columns]
-    if missing:
-        raise ValueError(f"Missing expected feature columns: {missing}")
-    return X[FEATURE_COLUMNS]
+from ml.features import select_features
 
 
 class MajorityClassBaseline:
@@ -49,11 +37,11 @@ class MajorityClassBaseline:
         return self
 
     def predict(self, X):
-        _select_features(X)  # validates shape/columns even though X is otherwise unused
+        select_features(X)  # validates shape/columns even though X is otherwise unused
         return np.full(len(X), self.majority_class_, dtype=int)
 
     def predict_proba(self, X):
-        _select_features(X)
+        select_features(X)
         p = self.positive_rate_
         return np.tile([1 - p, p], (len(X), 1))
 
@@ -78,7 +66,7 @@ class PersistenceBaseline:
     def predict(self, X):
         if not self._fitted:
             raise RuntimeError("PersistenceBaseline must be fit before predict")
-        _select_features(X)  # enforce the same column contract as other models
+        select_features(X)  # enforce the same column contract as other models
         return (X[self.indicator_column] > 0).astype(int).to_numpy()
 
     def predict_proba(self, X):
@@ -104,7 +92,7 @@ class LogisticRegressionBaseline:
         self._fitted = False
 
     def fit(self, X, y):
-        X_selected = _select_features(X)
+        X_selected = select_features(X)
         self.model.fit(X_selected, y)
         self._fitted = True
         return self
@@ -112,9 +100,9 @@ class LogisticRegressionBaseline:
     def predict(self, X):
         if not self._fitted:
             raise RuntimeError("LogisticRegressionBaseline must be fit before predict")
-        return self.model.predict(_select_features(X))
+        return self.model.predict(select_features(X))
 
     def predict_proba(self, X):
         if not self._fitted:
             raise RuntimeError("LogisticRegressionBaseline must be fit before predict_proba")
-        return self.model.predict_proba(_select_features(X))
+        return self.model.predict_proba(select_features(X))
