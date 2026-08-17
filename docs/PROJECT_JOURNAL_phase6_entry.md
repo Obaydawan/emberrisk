@@ -97,3 +97,24 @@ probabilities are required by the product. Once that decision is locked,
 do not iterate on VALIDATION again; evaluate TEST exactly once and record the
 final generalization metrics. MLflow can be introduced if further tracked
 experimentation is required, but it is not needed for the single TEST run.
+
+### Final candidate lock
+
+**Locked model:** Gradient Boosting (`HistGradientBoostingClassifier`)
+
+**Locked threshold:** 0.70
+
+The model and operating threshold were selected using VALIDATION only.
+Gradient Boosting achieved the best validation F1 after threshold selection
+(0.7340 at threshold 0.70) and the best PR-AUC (0.8176). Random Forest
+achieved F1 0.7307 at threshold 0.65 and PR-AUC 0.8156.
+
+Probability calibration is not included in the locked operating point because
+the current product objective is binary fire-risk classification rather than
+delivery of calibrated probability estimates.
+
+**VALIDATION is now frozen. No further model, threshold, or calibration
+selection will be performed using VALIDATION.**
+
+The next evaluation is the single TEST evaluation of this locked model and
+threshold. TEST has remained untouched throughout Phases 4–6.
