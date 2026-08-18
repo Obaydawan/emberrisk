@@ -1,6 +1,6 @@
 # EmberRisk
 
-EmberRisk is a lightweight MLOps, Data Engineering with Machine-Learning project for wildfire-risk classification using public environmental data.
+mberRisk is a lightweight MLOps, Data Engineering with Machine-Learning project for wildfire-risk classification using public environmental data.
 
 The project combines historical wildfire detections with weather and environmental data to build a cell-day dataset and predict whether a wildfire will occur within a future time horizon.
 
