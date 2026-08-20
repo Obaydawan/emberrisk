@@ -1,0 +1,5 @@
+{
+  "evaluated": true,
+  "model_name": "gradient_boosting",
+  "locked_threshold": 0.7
+}
