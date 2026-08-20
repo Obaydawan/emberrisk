@@ -1,0 +1,103 @@
+{
+  "run_metadata": {
+    "target_column": "future_fire_7d",
+    "n_train": 589798,
+    "n_validation": 117895,
+    "n_test_not_evaluated": 233852,
+    "validation_positive_rate": 0.1811,
+    "models_compared": [
+      "majority_class",
+      "persistence",
+      "logistic_regression",
+      "random_forest",
+      "gradient_boosting"
+    ]
+  },
+  "results": {
+    "majority_class": {
+      "model": "majority_class",
+      "n_samples": 117895,
+      "n_positive": 21346,
+      "positive_rate": 0.1811,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "pr_auc": 0.1811,
+      "confusion_matrix": {
+        "true_negative": 96549,
+        "false_positive": 0,
+        "false_negative": 21346,
+        "true_positive": 0
+      }
+    },
+    "persistence": {
+      "model": "persistence",
+      "n_samples": 117895,
+      "n_positive": 21346,
+      "positive_rate": 0.1811,
+      "precision": 0.8543,
+      "recall": 0.3143,
+      "f1": 0.4595,
+      "roc_auc": 0.6512,
+      "pr_auc": 0.3926,
+      "confusion_matrix": {
+        "true_negative": 95405,
+        "false_positive": 1144,
+        "false_negative": 14638,
+        "true_positive": 6708
+      }
+    },
+    "logistic_regression": {
+      "model": "logistic_regression",
+      "n_samples": 117895,
+      "n_positive": 21346,
+      "positive_rate": 0.1811,
+      "precision": 0.521,
+      "recall": 0.8997,
+      "f1": 0.6599,
+      "roc_auc": 0.9279,
+      "pr_auc": 0.7414,
+      "confusion_matrix": {
+        "true_negative": 78894,
+        "false_positive": 17655,
+        "false_negative": 2140,
+        "true_positive": 19206
+      }
+    },
+    "random_forest": {
+      "model": "random_forest",
+      "n_samples": 117895,
+      "n_positive": 21346,
+      "positive_rate": 0.1811,
+      "precision": 0.6156,
+      "recall": 0.8337,
+      "f1": 0.7082,
+      "roc_auc": 0.9406,
+      "pr_auc": 0.8156,
+      "confusion_matrix": {
+        "true_negative": 85437,
+        "false_positive": 11112,
+        "false_negative": 3550,
+        "true_positive": 17796
+      }
+    },
+    "gradient_boosting": {
+      "model": "gradient_boosting",
+      "n_samples": 117895,
+      "n_positive": 21346,
+      "positive_rate": 0.1811,
+      "precision": 0.5776,
+      "recall": 0.8667,
+      "f1": 0.6932,
+      "roc_auc": 0.9417,
+      "pr_auc": 0.8176,
+      "confusion_matrix": {
+        "true_negative": 83020,
+        "false_positive": 13529,
+        "false_negative": 2846,
+        "true_positive": 18500
+      }
+    }
+  }
+}

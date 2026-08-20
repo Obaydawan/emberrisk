@@ -1,0 +1,737 @@
+{
+  "run_metadata": {
+    "target_column": "future_fire_7d",
+    "n_train": 589798,
+    "n_validation": 117895,
+    "n_test_not_evaluated": 233852,
+    "validation_positive_rate": 0.1811,
+    "threshold_sweep_range": "0.05-0.95, step 0.05",
+    "calibration_bins": 10
+  },
+  "analyses": {
+    "random_forest": {
+      "roc_auc": 0.9406,
+      "pr_auc": 0.8156,
+      "default_threshold_metrics": {
+        "threshold": 0.5,
+        "precision": 0.6156,
+        "recall": 0.8337,
+        "f1": 0.7082,
+        "positive_rate": 0.2452,
+        "true_positive": 17796,
+        "true_negative": 85437,
+        "false_positive": 11112,
+        "false_negative": 3550,
+        "n_samples": 117895
+      },
+      "optimal_threshold_metrics": {
+        "threshold": 0.65,
+        "precision": 0.7209,
+        "recall": 0.7407,
+        "f1": 0.7307,
+        "positive_rate": 0.1861,
+        "true_positive": 15812,
+        "true_negative": 90426,
+        "false_positive": 6123,
+        "false_negative": 5534,
+        "n_samples": 117895
+      },
+      "threshold_sweep": [
+        {
+          "threshold": 0.05,
+          "precision": 0.2414,
+          "recall": 0.9967,
+          "f1": 0.3887,
+          "positive_rate": 0.7476,
+          "true_positive": 21276,
+          "true_negative": 29690,
+          "false_positive": 66859,
+          "false_negative": 70,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.1,
+          "precision": 0.3397,
+          "recall": 0.9799,
+          "f1": 0.5045,
+          "positive_rate": 0.5223,
+          "true_positive": 20917,
+          "true_negative": 55891,
+          "false_positive": 40658,
+          "false_negative": 429,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.15,
+          "precision": 0.4117,
+          "recall": 0.9639,
+          "f1": 0.5769,
+          "positive_rate": 0.4239,
+          "true_positive": 20575,
+          "true_negative": 67143,
+          "false_positive": 29406,
+          "false_negative": 771,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.2,
+          "precision": 0.4434,
+          "recall": 0.9524,
+          "f1": 0.6051,
+          "positive_rate": 0.3889,
+          "true_positive": 20329,
+          "true_negative": 71031,
+          "false_positive": 25518,
+          "false_negative": 1017,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.25,
+          "precision": 0.4662,
+          "recall": 0.9408,
+          "f1": 0.6234,
+          "positive_rate": 0.3654,
+          "true_positive": 20082,
+          "true_negative": 73552,
+          "false_positive": 22997,
+          "false_negative": 1264,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.3,
+          "precision": 0.4901,
+          "recall": 0.9254,
+          "f1": 0.6408,
+          "positive_rate": 0.3419,
+          "true_positive": 19754,
+          "true_negative": 75999,
+          "false_positive": 20550,
+          "false_negative": 1592,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.35,
+          "precision": 0.5167,
+          "recall": 0.9061,
+          "f1": 0.6581,
+          "positive_rate": 0.3175,
+          "true_positive": 19341,
+          "true_negative": 78460,
+          "false_positive": 18089,
+          "false_negative": 2005,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.4,
+          "precision": 0.5476,
+          "recall": 0.8835,
+          "f1": 0.6761,
+          "positive_rate": 0.2921,
+          "true_positive": 18860,
+          "true_negative": 80966,
+          "false_positive": 15583,
+          "false_negative": 2486,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.45,
+          "precision": 0.5819,
+          "recall": 0.8604,
+          "f1": 0.6943,
+          "positive_rate": 0.2677,
+          "true_positive": 18366,
+          "true_negative": 83353,
+          "false_positive": 13196,
+          "false_negative": 2980,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.5,
+          "precision": 0.6156,
+          "recall": 0.8337,
+          "f1": 0.7082,
+          "positive_rate": 0.2452,
+          "true_positive": 17796,
+          "true_negative": 85437,
+          "false_positive": 11112,
+          "false_negative": 3550,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.55,
+          "precision": 0.6504,
+          "recall": 0.805,
+          "f1": 0.7195,
+          "positive_rate": 0.2241,
+          "true_positive": 17184,
+          "true_negative": 87311,
+          "false_positive": 9238,
+          "false_negative": 4162,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.6,
+          "precision": 0.6851,
+          "recall": 0.774,
+          "f1": 0.7268,
+          "positive_rate": 0.2045,
+          "true_positive": 16521,
+          "true_negative": 88955,
+          "false_positive": 7594,
+          "false_negative": 4825,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.65,
+          "precision": 0.7209,
+          "recall": 0.7407,
+          "f1": 0.7307,
+          "positive_rate": 0.1861,
+          "true_positive": 15812,
+          "true_negative": 90426,
+          "false_positive": 6123,
+          "false_negative": 5534,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.7,
+          "precision": 0.7543,
+          "recall": 0.7009,
+          "f1": 0.7266,
+          "positive_rate": 0.1682,
+          "true_positive": 14961,
+          "true_negative": 91676,
+          "false_positive": 4873,
+          "false_negative": 6385,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.75,
+          "precision": 0.7887,
+          "recall": 0.6574,
+          "f1": 0.7171,
+          "positive_rate": 0.1509,
+          "true_positive": 14033,
+          "true_negative": 92790,
+          "false_positive": 3759,
+          "false_negative": 7313,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.8,
+          "precision": 0.8219,
+          "recall": 0.6065,
+          "f1": 0.6979,
+          "positive_rate": 0.1336,
+          "true_positive": 12946,
+          "true_negative": 93743,
+          "false_positive": 2806,
+          "false_negative": 8400,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.85,
+          "precision": 0.858,
+          "recall": 0.5395,
+          "f1": 0.6625,
+          "positive_rate": 0.1139,
+          "true_positive": 11517,
+          "true_negative": 94643,
+          "false_positive": 1906,
+          "false_negative": 9829,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.9,
+          "precision": 0.8996,
+          "recall": 0.4599,
+          "f1": 0.6086,
+          "positive_rate": 0.0926,
+          "true_positive": 9817,
+          "true_negative": 95453,
+          "false_positive": 1096,
+          "false_negative": 11529,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.95,
+          "precision": 0.9453,
+          "recall": 0.3418,
+          "f1": 0.5021,
+          "positive_rate": 0.0655,
+          "true_positive": 7296,
+          "true_negative": 96127,
+          "false_positive": 422,
+          "false_negative": 14050,
+          "n_samples": 117895
+        }
+      ],
+      "brier_score": 0.087495,
+      "ece": 0.104211,
+      "calibration_bins": [
+        {
+          "bin_index": 0,
+          "bin_range": [
+            0.0,
+            0.1
+          ],
+          "n_samples": 56320,
+          "mean_predicted_prob": 0.0438,
+          "observed_positive_rate": 0.0076
+        },
+        {
+          "bin_index": 1,
+          "bin_range": [
+            0.1,
+            0.2
+          ],
+          "n_samples": 15728,
+          "mean_predicted_prob": 0.134,
+          "observed_positive_rate": 0.0374
+        },
+        {
+          "bin_index": 2,
+          "bin_range": [
+            0.2,
+            0.3
+          ],
+          "n_samples": 5543,
+          "mean_predicted_prob": 0.2499,
+          "observed_positive_rate": 0.1037
+        },
+        {
+          "bin_index": 3,
+          "bin_range": [
+            0.3,
+            0.4
+          ],
+          "n_samples": 5861,
+          "mean_predicted_prob": 0.3507,
+          "observed_positive_rate": 0.1525
+        },
+        {
+          "bin_index": 4,
+          "bin_range": [
+            0.4,
+            0.5
+          ],
+          "n_samples": 5535,
+          "mean_predicted_prob": 0.4487,
+          "observed_positive_rate": 0.1922
+        },
+        {
+          "bin_index": 5,
+          "bin_range": [
+            0.5,
+            0.6
+          ],
+          "n_samples": 4793,
+          "mean_predicted_prob": 0.5488,
+          "observed_positive_rate": 0.266
+        },
+        {
+          "bin_index": 6,
+          "bin_range": [
+            0.6,
+            0.7
+          ],
+          "n_samples": 4281,
+          "mean_predicted_prob": 0.6496,
+          "observed_positive_rate": 0.3644
+        },
+        {
+          "bin_index": 7,
+          "bin_range": [
+            0.7,
+            0.8
+          ],
+          "n_samples": 4082,
+          "mean_predicted_prob": 0.7499,
+          "observed_positive_rate": 0.4936
+        },
+        {
+          "bin_index": 8,
+          "bin_range": [
+            0.8,
+            0.9
+          ],
+          "n_samples": 4839,
+          "mean_predicted_prob": 0.8514,
+          "observed_positive_rate": 0.6466
+        },
+        {
+          "bin_index": 9,
+          "bin_range": [
+            0.9,
+            1.0
+          ],
+          "n_samples": 10913,
+          "mean_predicted_prob": 0.9658,
+          "observed_positive_rate": 0.8996
+        }
+      ]
+    },
+    "gradient_boosting": {
+      "roc_auc": 0.9417,
+      "pr_auc": 0.8176,
+      "default_threshold_metrics": {
+        "threshold": 0.5,
+        "precision": 0.5776,
+        "recall": 0.8667,
+        "f1": 0.6932,
+        "positive_rate": 0.2717,
+        "true_positive": 18500,
+        "true_negative": 83020,
+        "false_positive": 13529,
+        "false_negative": 2846,
+        "n_samples": 117895
+      },
+      "optimal_threshold_metrics": {
+        "threshold": 0.7,
+        "precision": 0.7227,
+        "recall": 0.7457,
+        "f1": 0.734,
+        "positive_rate": 0.1868,
+        "true_positive": 15917,
+        "true_negative": 90442,
+        "false_positive": 6107,
+        "false_negative": 5429,
+        "n_samples": 117895
+      },
+      "threshold_sweep": [
+        {
+          "threshold": 0.05,
+          "precision": 0.2334,
+          "recall": 0.998,
+          "f1": 0.3783,
+          "positive_rate": 0.7742,
+          "true_positive": 21303,
+          "true_negative": 26572,
+          "false_positive": 69977,
+          "false_negative": 43,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.1,
+          "precision": 0.3263,
+          "recall": 0.9829,
+          "f1": 0.4899,
+          "positive_rate": 0.5454,
+          "true_positive": 20980,
+          "true_negative": 53233,
+          "false_positive": 43316,
+          "false_negative": 366,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.15,
+          "precision": 0.4035,
+          "recall": 0.97,
+          "f1": 0.5699,
+          "positive_rate": 0.4353,
+          "true_positive": 20706,
+          "true_negative": 65934,
+          "false_positive": 30615,
+          "false_negative": 640,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.2,
+          "precision": 0.4303,
+          "recall": 0.9615,
+          "f1": 0.5945,
+          "positive_rate": 0.4046,
+          "true_positive": 20525,
+          "true_negative": 69375,
+          "false_positive": 27174,
+          "false_negative": 821,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.25,
+          "precision": 0.4471,
+          "recall": 0.9543,
+          "f1": 0.609,
+          "positive_rate": 0.3864,
+          "true_positive": 20371,
+          "true_negative": 71361,
+          "false_positive": 25188,
+          "false_negative": 975,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.3,
+          "precision": 0.4648,
+          "recall": 0.9439,
+          "f1": 0.6229,
+          "positive_rate": 0.3677,
+          "true_positive": 20148,
+          "true_negative": 73348,
+          "false_positive": 23201,
+          "false_negative": 1198,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.35,
+          "precision": 0.4864,
+          "recall": 0.93,
+          "f1": 0.6387,
+          "positive_rate": 0.3462,
+          "true_positive": 19851,
+          "true_negative": 75588,
+          "false_positive": 20961,
+          "false_negative": 1495,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.4,
+          "precision": 0.5135,
+          "recall": 0.9116,
+          "f1": 0.6569,
+          "positive_rate": 0.3214,
+          "true_positive": 19458,
+          "true_negative": 78111,
+          "false_positive": 18438,
+          "false_negative": 1888,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.45,
+          "precision": 0.5431,
+          "recall": 0.8894,
+          "f1": 0.6744,
+          "positive_rate": 0.2965,
+          "true_positive": 18986,
+          "true_negative": 80576,
+          "false_positive": 15973,
+          "false_negative": 2360,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.5,
+          "precision": 0.5776,
+          "recall": 0.8667,
+          "f1": 0.6932,
+          "positive_rate": 0.2717,
+          "true_positive": 18500,
+          "true_negative": 83020,
+          "false_positive": 13529,
+          "false_negative": 2846,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.55,
+          "precision": 0.6127,
+          "recall": 0.841,
+          "f1": 0.7089,
+          "positive_rate": 0.2485,
+          "true_positive": 17951,
+          "true_negative": 85201,
+          "false_positive": 11348,
+          "false_negative": 3395,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.6,
+          "precision": 0.647,
+          "recall": 0.8127,
+          "f1": 0.7204,
+          "positive_rate": 0.2274,
+          "true_positive": 17348,
+          "true_negative": 87083,
+          "false_positive": 9466,
+          "false_negative": 3998,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.65,
+          "precision": 0.683,
+          "recall": 0.7831,
+          "f1": 0.7296,
+          "positive_rate": 0.2076,
+          "true_positive": 16716,
+          "true_negative": 88791,
+          "false_positive": 7758,
+          "false_negative": 4630,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.7,
+          "precision": 0.7227,
+          "recall": 0.7457,
+          "f1": 0.734,
+          "positive_rate": 0.1868,
+          "true_positive": 15917,
+          "true_negative": 90442,
+          "false_positive": 6107,
+          "false_negative": 5429,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.75,
+          "precision": 0.7586,
+          "recall": 0.7043,
+          "f1": 0.7305,
+          "positive_rate": 0.1681,
+          "true_positive": 15035,
+          "true_negative": 91765,
+          "false_positive": 4784,
+          "false_negative": 6311,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.8,
+          "precision": 0.7919,
+          "recall": 0.6568,
+          "f1": 0.718,
+          "positive_rate": 0.1502,
+          "true_positive": 14019,
+          "true_negative": 92865,
+          "false_positive": 3684,
+          "false_negative": 7327,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.85,
+          "precision": 0.8311,
+          "recall": 0.5954,
+          "f1": 0.6938,
+          "positive_rate": 0.1297,
+          "true_positive": 12710,
+          "true_negative": 93966,
+          "false_positive": 2583,
+          "false_negative": 8636,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.9,
+          "precision": 0.8788,
+          "recall": 0.5082,
+          "f1": 0.6439,
+          "positive_rate": 0.1047,
+          "true_positive": 10847,
+          "true_negative": 95053,
+          "false_positive": 1496,
+          "false_negative": 10499,
+          "n_samples": 117895
+        },
+        {
+          "threshold": 0.95,
+          "precision": 0.9302,
+          "recall": 0.3838,
+          "f1": 0.5434,
+          "positive_rate": 0.0747,
+          "true_positive": 8193,
+          "true_negative": 95934,
+          "false_positive": 615,
+          "false_negative": 13153,
+          "n_samples": 117895
+        }
+      ],
+      "brier_score": 0.095452,
+      "ece": 0.123672,
+      "calibration_bins": [
+        {
+          "bin_index": 0,
+          "bin_range": [
+            0.0,
+            0.1
+          ],
+          "n_samples": 53599,
+          "mean_predicted_prob": 0.0448,
+          "observed_positive_rate": 0.0068
+        },
+        {
+          "bin_index": 1,
+          "bin_range": [
+            0.1,
+            0.2
+          ],
+          "n_samples": 16597,
+          "mean_predicted_prob": 0.131,
+          "observed_positive_rate": 0.0274
+        },
+        {
+          "bin_index": 2,
+          "bin_range": [
+            0.2,
+            0.3
+          ],
+          "n_samples": 4350,
+          "mean_predicted_prob": 0.2504,
+          "observed_positive_rate": 0.0867
+        },
+        {
+          "bin_index": 3,
+          "bin_range": [
+            0.3,
+            0.4
+          ],
+          "n_samples": 5453,
+          "mean_predicted_prob": 0.3522,
+          "observed_positive_rate": 0.1265
+        },
+        {
+          "bin_index": 4,
+          "bin_range": [
+            0.4,
+            0.5
+          ],
+          "n_samples": 5867,
+          "mean_predicted_prob": 0.4502,
+          "observed_positive_rate": 0.1633
+        },
+        {
+          "bin_index": 5,
+          "bin_range": [
+            0.5,
+            0.6
+          ],
+          "n_samples": 5215,
+          "mean_predicted_prob": 0.5483,
+          "observed_positive_rate": 0.2209
+        },
+        {
+          "bin_index": 6,
+          "bin_range": [
+            0.6,
+            0.7
+          ],
+          "n_samples": 4790,
+          "mean_predicted_prob": 0.6503,
+          "observed_positive_rate": 0.2987
+        },
+        {
+          "bin_index": 7,
+          "bin_range": [
+            0.7,
+            0.8
+          ],
+          "n_samples": 4321,
+          "mean_predicted_prob": 0.7497,
+          "observed_positive_rate": 0.4393
+        },
+        {
+          "bin_index": 8,
+          "bin_range": [
+            0.8,
+            0.9
+          ],
+          "n_samples": 5360,
+          "mean_predicted_prob": 0.853,
+          "observed_positive_rate": 0.5918
+        },
+        {
+          "bin_index": 9,
+          "bin_range": [
+            0.9,
+            1.0
+          ],
+          "n_samples": 12343,
+          "mean_predicted_prob": 0.9651,
+          "observed_positive_rate": 0.8788
+        }
+      ]
+    }
+  }
+}
