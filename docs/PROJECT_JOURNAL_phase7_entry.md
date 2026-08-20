@@ -56,21 +56,23 @@ The locked model (HistGradientBoostingClassifier) with threshold **0.70** was ev
 - False Positive: 13,992
 - False Negative: 11,759
 
+
 ### Interpretation
 
-- The model generalizes reasonably well from VALIDATION to TEST.
-- VALIDATION F1 at threshold 0.70 was 0.7340 → TEST F1 is 0.7172 (small drop, expected and acceptable).
-- Precision and Recall are well balanced.
-- ROC-AUC (0.9311) and PR-AUC (0.7985) remain strong.
-- No further tuning was performed on TEST (as required by project discipline).
-- Evaluation lock file was created: `docs/.phase7_test_evaluation.lock`
+The locked model (HistGradientBoostingClassifier @ threshold 0.70) shows a small and expected performance drop from VALIDATION to TEST:
 
-**Status: Phase 7 complete. TEST evaluation is now frozen.**
-### Interpretation
-[To be filled in after the real TEST results are available -- comparing
-TEST performance to the VALIDATION reference numbers above, and noting
-whether the gap (if any) is consistent with normal generalization or
-suggests something else worth investigating.]
+- F1: 0.7340 → 0.7172 (−2.3%)
+- Precision: 0.7227 → 0.7001 (−3.1%)
+- Recall: 0.7457 → 0.7352 (−1.4%)
+- PR-AUC: 0.8176 → 0.7985 (−2.3%)
+- ROC-AUC: 0.9417 → 0.9311 (−1.1%)
+
+Precision softened slightly more than recall. This remains a modest change and is consistent with normal temporal generalization rather than overfitting or data leakage.
+
+Full analysis, confusion matrix, and limitations are documented in `docs/final-results-and-limitations.md`.
+
+**Status: Phase 7 complete. TEST evaluation and documentation are now frozen.**
+
 
 ### Testing
 New: `tests/test_ml_test_evaluation.py`. Hand-computed correctness checks
