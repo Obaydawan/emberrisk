@@ -35,7 +35,6 @@ subtly disagree). No modifications to any Phase 2-6 file.
 - VALIDATION PR-AUC at this operating point (Phase 6, reference only): 0.8176
 
 ### Results
-### Results
 
 The locked model (HistGradientBoostingClassifier) with threshold **0.70** was evaluated **exactly once** on the held-out TEST set.
 
