@@ -24,6 +24,7 @@ data/gold/*
 *.csv
 *.parquet
 *.json
+!docs/*.json
 
 # DuckDB
 *.duckdb
@@ -49,3 +50,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Zip artifacts
+*.zip
