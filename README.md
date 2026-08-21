@@ -1,6 +1,6 @@
 # EmberRisk
 
-** wildfire risk intelligence pipeline — reproducible data engineering and machine learning, built with strict experimental discipline.**
+**A wildfire risk intelligence pipeline — reproducible data engineering and machine learning, built with strict experimental discipline.**
 
 EmberRisk predicts whether a given location (grid cell) will experience a fire within the next 7 days (`future_fire_7d`), using historical wildfire detections combined with weather and environmental data. The project covers the full lifecycle of a practical ML pipeline: data ingestion, validation, feature engineering, model comparison, threshold selection, and a final, one-time evaluation on a held-out TEST set.
 
