@@ -6,6 +6,8 @@ EmberRisk predicts whether a given location (grid cell) will experience a fire w
 
 A core engineering principle drives the project as much as the modeling result itself: a strict, code-enforced separation between model development and final evaluation. The TEST set was scored **exactly once**, after the model and decision threshold were fully locked using only the VALIDATION set — a rule enforced structurally in code (`ml/test_evaluation.py`), not just by convention.
 
+**Looking for the freelance/portfolio-facing summary instead?** See [`CASE_STUDY.md`](CASE_STUDY.md).
+
 ## Data
 
 EmberRisk uses two public environmental data sources:
