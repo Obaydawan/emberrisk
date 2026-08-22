@@ -106,8 +106,11 @@ function used by the Phase 9 batch pipeline. See
 [`docs/phase10-serving-api.md`](docs/phase10-serving-api.md) for
 architecture, scope, and testing detail.
 
-**Planned / not yet implemented:**
-- Basic monitoring/drift-detection documentation
+**Phase 11 complete:** Monitoring & drift-detection design — what would
+be tracked in a live deployment (feature drift, prediction drift, delayed
+ground-truth evaluation) and what would trigger a model review, without
+building unused infrastructure for a project with no live data source.
+See [`docs/phase11-monitoring-and-drift.md`](docs/phase11-monitoring-and-drift.md).
 
 ## Scope
 
