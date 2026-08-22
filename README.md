@@ -92,13 +92,17 @@ PYTHONPATH=. pytest -q
 
 ## Project Status
 
-**Phases 1-7 complete:** data ingestion, processing, feature engineering, temporal split, baseline and model comparison, threshold/calibration analysis, model lock, and final one-time TEST evaluation. All 187 automated tests passing. The TEST result is frozen and fully documented in [`docs/final-results-and-limitations.md`](docs/final-results-and-limitations.md).
+**Phase 9 complete:** Pipeline orchestration via Apache Airflow (Docker
+Compose, LocalExecutor) — ingestion, processing, validation, model
+persistence, and batch scoring run as a scheduled DAG. See
+[`docs/phase9-orchestration.md`](docs/phase9-orchestration.md) for
+architecture, scope, and a documented environment discrepancy between the
+orchestration container and the host environment used for locked results.
+
 
 **Planned / not yet implemented:**
-- Pipeline orchestration (Apache Airflow)
-- Lightweight prediction-serving layer (batch scorer or API)
+- Prediction-serving API (FastAPI)
 - Basic monitoring/drift-detection documentation
-
 ## Scope
 
 EmberRisk is an independent wildfire-risk data engineering and ML portfolio project. The focus is on a complete, reproducible, and honestly-evaluated pipeline — built and run entirely on local, resource-constrained hardware.

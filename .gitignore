@@ -53,3 +53,6 @@ Thumbs.db
 
 # Zip artifacts
 *.zip
+models/
+logs/
+data/predictions/
