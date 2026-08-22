@@ -22,6 +22,8 @@ from contextlib import asynccontextmanager
 
 import pandas as pd
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from api.schemas import (
     HealthResponse,
@@ -66,6 +68,14 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+
+
+@app.get("/")
+def serve_demo_ui():
+    return FileResponse("api/static/index.html")
+
+
+app.mount("/static", StaticFiles(directory="api/static"), name="static")
 
 
 def _require_model():
