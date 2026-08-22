@@ -99,10 +99,16 @@ persistence, and batch scoring run as a scheduled DAG. See
 architecture, scope, and a documented environment discrepancy between the
 orchestration container and the host environment used for locked results.
 
+**Phase 10 complete:** Prediction-serving API via FastAPI —
+`/predict`, `/predict/sample/{cell_id}/{date}`, `/model/info`, and
+`/health` endpoints, all scoring through the same `ml.predict.score_batch()`
+function used by the Phase 9 batch pipeline. See
+[`docs/phase10-serving-api.md`](docs/phase10-serving-api.md) for
+architecture, scope, and testing detail.
 
 **Planned / not yet implemented:**
-- Prediction-serving API (FastAPI)
 - Basic monitoring/drift-detection documentation
+
 ## Scope
 
 EmberRisk is an independent wildfire-risk data engineering and ML portfolio project. The focus is on a complete, reproducible, and honestly-evaluated pipeline — built and run entirely on local, resource-constrained hardware.
