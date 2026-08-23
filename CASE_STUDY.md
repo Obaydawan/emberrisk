@@ -19,7 +19,7 @@ I built EmberRisk to predict whether a given location will experience a wildfire
 - **ML methodology** — strict TRAIN/VALIDATION/TEST separation with zero data leakage, model comparison (Logistic Regression → Random Forest → Gradient Boosting), threshold optimization, and a calibration analysis that was evaluated and *deliberately not acted on* because it didn't serve the actual product objective
 - **A one-time, frozen final evaluation** — the test set was scored exactly once, enforced in code (not just by convention) via a lock-file mechanism that raises an error if anyone tries to re-run it
 - **Orchestration** — the full pipeline runs as a scheduled Apache Airflow DAG (ingestion → processing → validation → model persistence → batch scoring), containerized with Docker Compose
-- **A serving API** — a FastAPI service exposing the locked model for on-demand predictions, sharing the exact same scoring code path as the batch pipeline so the two can never silently disagree
+- **A serving API with a live demo UI** — a FastAPI service exposing the locked model for on-demand predictions, sharing the exact same scoring code path as the batch pipeline so the two can never silently disagree, plus a browser-based demo page for trying predictions without writing any code
 - **187+ automated tests** covering every stage, from feature selection guards to lock-file enforcement to API input validation
 
 ## The Result

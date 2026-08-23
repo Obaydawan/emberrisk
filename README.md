@@ -107,6 +107,8 @@ orchestration container and the host environment used for locked results.
 function used by the Phase 9 batch pipeline. See
 [`docs/phase10-serving-api.md`](docs/phase10-serving-api.md) for
 architecture, scope, and testing detail.
+A minimal browser demo UI is also served at `/` — run the API locally and
+visit `http://localhost:8000/` to try predictions without writing code.
 
 **Phase 11 complete:** Monitoring & drift-detection design — what would
 be tracked in a live deployment (feature drift, prediction drift, delayed
