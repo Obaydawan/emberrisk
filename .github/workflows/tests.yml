@@ -24,5 +24,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Train and save the locked model
+        run: PYTHONPATH=. python -m ml.train_and_save_locked_model
+
       - name: Run test suite
         run: PYTHONPATH=. pytest -q
