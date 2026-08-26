@@ -53,6 +53,8 @@ Thumbs.db
 
 # Zip artifacts
 *.zip
-models/
+models/*
+!models/gradient_boosting_locked.joblib
+!models/gradient_boosting_locked.metadata.json
 logs/
 data/predictions/

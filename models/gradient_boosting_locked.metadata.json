@@ -1,0 +1,25 @@
+{
+  "model_name": "gradient_boosting",
+  "locked_threshold": 0.7,
+  "feature_columns": [
+    "fire_count",
+    "fire_count_3d",
+    "fire_count_7d",
+    "fire_count_14d",
+    "fire_count_30d",
+    "days_since_last_detection",
+    "frp_mean",
+    "frp_max",
+    "frp_mean_7d",
+    "frp_max_7d",
+    "temperature_max",
+    "temperature_min",
+    "relative_humidity",
+    "precipitation",
+    "wind_speed"
+  ],
+  "target_column": "future_fire_7d",
+  "n_train_rows": 589798,
+  "split_validated": true,
+  "note": "This artifact reproduces the Phase 6/7 locked model exactly -- same class, same hyperparameters, same TRAIN split. It does not represent a new model-selection decision."
+}
